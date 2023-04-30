@@ -1,5 +1,7 @@
 body {
   background-color: lightgray;
+  padding: 50px;
+  padding-bottom: 500px;
 }
 
 p {
