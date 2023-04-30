@@ -1,8 +1,19 @@
-export const Item = (props) => {
+import PropTypes from 'prop-types'
+
+export const Item = ({ marca, ano_lancamento }) => {
     return (
         <>
-            <li>{props.marca}</li>
-            <p>teste</p>
+            <li>{marca} - {ano_lancamento}</li>
         </>
     )
+}
+
+Item.proptype = {
+    marca: PropTypes.string.isRequired,
+    ano_lancamento: PropTypes.number,
+}
+
+Item.defaultProps = {
+    marca: 'Faltou a marca',
+    ano_lancamento: 0,
 }
